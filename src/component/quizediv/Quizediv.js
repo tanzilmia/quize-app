@@ -10,7 +10,7 @@ const Quizediv = () => {
         <div>
             <h2 className='text-2xl text-center my-5'> Improve Your <span className='t text-green-500'>{quizes.name}</span> Skills With Quize </h2>
 
-            <div className="all_quzes">
+            <div className= 'flex flex-wrap w-9/12 m-auto'>
                 {
                     questions.map(questionbank => <Quiz questionbank = {questionbank} key={questionbank.id}></Quiz>)
                 }
