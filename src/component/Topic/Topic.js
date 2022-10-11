@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Topic = ({topic}) => {
-    // dstructure topic 
     let {name,logo,total,id} = topic
     let naviget = useNavigate()
     const showQuize = () =>{
