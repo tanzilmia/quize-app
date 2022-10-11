@@ -1,23 +1,52 @@
 import React from 'react';
-
-const Quiz = ({questionbank}) => {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const Quiz = ({questionbank,correct,setcorrect,wrong,setwrong}) => {
     let {correctAnswer,options,question,} = questionbank
-
    const seeCorrectAns = () =>{
      let correct = options.find(option=> option === correctAnswer)
      if(correct){
-        alert(`correct answer is ${correct}`)
-     }else{
-        alert('not found')
+        toast.success(` Answer : ${correct} `, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
      }
    }
 
     const submitAnswer = event => {
        let mysubmit = event.target.innerText
        if(mysubmit === correctAnswer){
-        alert(' working')
+        let rightans = correct + 1
+        setcorrect(rightans)
+        toast.success(` correct Answer `, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
        }else{
-        alert('faltu')
+        let wrongans = wrong + 1
+        setwrong(wrongans)
+        toast.error('Wrong Answer', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
        }
       }
     return (
@@ -31,6 +60,21 @@ const Quiz = ({questionbank}) => {
                 options.map(option => <p className='cursor-pointer border md:w-3/5 m-1 p-4' key = {option.toString()} onClick={submitAnswer}> {option} </p>)
             }
             </div>
+            {/* toaset data */}
+            <ToastContainer
+               position="top-center"
+               autoClose={3000}
+               hideProgressBar={false}
+               newestOnTop={false}
+               closeOnClick
+               rtl={false}
+               pauseOnFocusLoss
+               draggable
+               pauseOnHover
+               theme="light"
+                />
+
+            
         </div>
     );
 };
