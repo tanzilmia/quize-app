@@ -18,7 +18,7 @@ const Topic = ({topic}) => {
                 <div className="p-5">
                     <h3 className='s text-2xl'>{name}</h3>
                    <div className='flex justify-between items-center py-3'>
-                   <button onClick={showQuize} className='b bg-green-400 py-2 px-5 rounded-lg text-white font-semibold '>Start Quiz</button>
+                   <button onClick={showQuize} className='b bg-green-400 py-2 px-5 rounded-lg text-white font-semibold '>Start Quiz </button>
                    <small className='text-blue-700'>Total: {total} Question</small>
                    </div>
                 </div>
