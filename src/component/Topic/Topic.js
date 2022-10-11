@@ -16,11 +16,11 @@ const Topic = ({topic}) => {
                     <img src= {logo} alt="" />
                 </div>
                 <div className="p-5">
-                    <div className='flex justify-between items-center py-3'>
                     <h3 className='s text-2xl'>{name}</h3>
-                    <p> Total : {total} Question </p>
-                    </div>
-                    <button onClick={showQuize} className='b bg-green-300 py-2 px-5'>See More</button>
+                   <div className='flex justify-between items-center py-3'>
+                   <button onClick={showQuize} className='b bg-green-400 py-2 px-5 rounded-lg text-white font-semibold '>Start Quiz</button>
+                   <small className='text-blue-700'>Total: {total} Question</small>
+                   </div>
                 </div>
             </div>
        

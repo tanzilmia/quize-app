@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <div className="flex">
+            <div className="grid md:grid-cols-4 md:w-5/6 sm:w-4/6 gap-3 m-auto sm:m-auto py-5">
                 {
                     topics.map(topic => <Topic topic = {topic} key = {topic.id}></Topic>)
                 }
