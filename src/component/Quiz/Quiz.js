@@ -19,12 +19,11 @@ const Quiz = ({questionbank,correct,setcorrect,wrong,setwrong}) => {
      }
    }
 
-    const submitAnswer = event => {
-       let mysubmit = event.target.innerText
-       if(mysubmit === correctAnswer){
-        let rightans = correct + 1
-        setcorrect(rightans)
-        toast.success(` correct Answer `, {
+   const submitAnswer = (value)=>{
+     if(value === correctAnswer){
+           let rightans = correct + 1
+           setcorrect(rightans)
+            toast.success(` correct Answer `, {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
@@ -33,22 +32,23 @@ const Quiz = ({questionbank,correct,setcorrect,wrong,setwrong}) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
-       }else{
+            }); 
+     }else{
         let wrongans = wrong + 1
-        setwrong(wrongans)
-        toast.error('Wrong Answer', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
-       }
-      }
+            setwrong(wrongans)
+            toast.error('Wrong Answer', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+         });
+     }
+   }
+
     return (
         <div className = 'p-4 border w-full my-2 rounded-md shadow-sm'>
             <div className='flex justify-between'>
@@ -57,7 +57,7 @@ const Quiz = ({questionbank,correct,setcorrect,wrong,setwrong}) => {
             </div>
             <div className='p-2'>
             {
-                options.map(option => <p className='cursor-pointer border md:w-3/5 m-1 p-4' key = {option.toString()} onClick={submitAnswer}> {option} </p>)
+                options.map(option => <p className='cursor-pointer border md:w-3/5 m-1 p-4' key = {option.toString()} onClick={() =>submitAnswer(option)}> {option} </p>)
             }
             </div>
             {/* toaset data */}
