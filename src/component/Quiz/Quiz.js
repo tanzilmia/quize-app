@@ -2,7 +2,7 @@ import React from 'react';
 
 const Quiz = ({questionbank}) => {
      console.log(questionbank);
-    let {correctAnswer,options,question,id} = questionbank
+    let {correctAnswer,options,question,} = questionbank
 
     const submitAnswer = event => {
        let mysubmit = event.target.innerText
@@ -16,7 +16,7 @@ const Quiz = ({questionbank}) => {
         <div className='border-3'>
             <h3> {question} </h3>
             {
-                options.map(option => <p onClick={submitAnswer} key = {id}> {option} </p>)
+                options.map(option => <p key = {option.toString()} onClick={submitAnswer}> {option} </p>)
             }
         </div>
     );
