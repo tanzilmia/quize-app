@@ -5,7 +5,7 @@ const Navbar = () => {
 const [open, setopen] = useState(false)
 
     return (
-        <div className='shadow-md w-full fixed top-0 left-0'>
+        <div className='shadow-md w-full top-0 left-0'>
             <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
               <div className='font-bold text-2xl cursor-pointer flex items-center text-gray-800'>
                 x - Accademy
@@ -16,11 +16,11 @@ const [open, setopen] = useState(false)
               {/* <ion-icon name="close"></ion-icon> */}
               </div>
 
-              <ul className= {`md:flex md:items-center md:pb-0 pb-10 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20': 'top-[-500px]' }`}>
+              <ul className= {`md:flex md:items-center md:pb-0 pb-10 absolute md:static sm:bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20': 'top-[-500px]' }`}>
 
                 <NavLink className='md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block' to= '/'>Home</NavLink>
-                <NavLink className='md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block' to= '/statistics '>Statistics</NavLink>
-                <NavLink className='md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block' to= '/blog '>Blog </NavLink>
+                <NavLink className='md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block' to= '/statistics'>Statistics</NavLink>
+                <NavLink className='md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block' to= '/blog'>Blog </NavLink>
               </ul>
             </div>
         </div>
