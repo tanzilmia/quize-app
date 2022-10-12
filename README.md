@@ -1,6 +1,6 @@
 ## Project Details
 ### Site Name : x - Quize
-### Site Link : 
+### Site Link : [https://xquiz.netlify.app/]
 ### project steps :
 * use some react Hooks ( useState, useLoaderData )
 * use React Router 
