@@ -10,7 +10,7 @@ const Topic = ({topic}) => {
     
     return (
         
-            <div className= 'border'>
+            <div className= 'border rounded-lg shadow-md hover:shadow-sm'>
                 <div className="b bg-black">
                     <img src= {logo} alt="" />
                 </div>
