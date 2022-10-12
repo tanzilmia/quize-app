@@ -7,6 +7,7 @@ import Home from './component/Home/Home';
 import Statistics from './component/Statistics/Statistics';
 import Blog from './component/Blog/Blog';
 import Quizediv from './component/quizediv/Quizediv';
+import ErrorPage from './component/ErrorPage/ErrorPage';
 
 function App() {
 
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
       loader : ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
       element : <Quizediv></Quizediv>
     }
-  ]}
+  ]},
+  {
+    path : '*', element : <ErrorPage></ErrorPage>
+  }
 ])
 
   return (

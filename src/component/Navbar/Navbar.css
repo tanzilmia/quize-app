@@ -1,0 +1,14 @@
+/* .md:ml-8 my-5 md:my-0 text-xl text-gray-800 hover:text-gray-400 duration-500  block */
+.ul_tag a::before{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background: #000;
+    position: absolute;
+    margin-top: 30px;
+    transition: width 0.5s;
+   
+}
+.ul_tag a:hover::before{
+    width: 60px;
+}
